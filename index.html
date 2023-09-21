@@ -3,39 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tamagotchi Lab</title>
+    <title>Pokemon Day Care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/main.js" defer></script>
   </head>
 
   <body>
     <header>
-      <h1 class="game-title">Tamagotchi Code Along</h1>
+      <h1 class="game-title">Pokemon Day Care</h1>
     </header>
 
     <main class="container">
       <!-- game interface / UI section -->
       <section id="controller" class="button-wrapper">
-        <button>play</button>
-        <button>feed</button>
-        <button>sleep</button>
+        <button>PLAY</button>
+        <button>FEED</button>
+        <button>NAP</button>
+      </section>
+      
+      <!-- game display / messaging section -->
+      <section id="game-state" class="game-state-wrapper">
+        <h2 id="tama-message" class="hidden">
+          Oh no, <span id="message-content">Pikachu Fainted!</span>
+          <button id="restartButton" class="hidden">Play Again</button>
+        </h2>
+        <img id="tama-graphic" src="../assets/pikachu.gif" class="game-graphic" />
       </section>
 
       <!-- game data section -->
       <section id="stat-display" class="stats-wrapper">
-        <p>Happiness: <span id="boredom-stat">...</span></p>
+        <p>Boredom: <span id="boredom-stat">...</span></p>
         <p>Hunger: <span id="hunger-stat">...</span></p>
-        <p>Tiredness: <span id="sleepiness-stat">...</span></p>
+        <p>Fatigue: <span id="sleepiness-stat">...</span></p>
       </section>
 
-      <!-- game display / messaging section -->
-      <section id="game-state" class="game-state-wrapper">
-        <h2 id="tama-message" class="hidden">
-          Oh no! <span id="message-content">You starved!</span>
-        </h2>
-        <img id="tama-graphic" src="../assets/wolf-1.png" class="game-graphic" />
-        <button id="restart" class="hidden">Play Again</button>
-      </section>
     </main>
   </body>
 </html>

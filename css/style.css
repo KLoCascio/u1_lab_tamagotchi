@@ -1,1 +1,168 @@
 /* add styling here */
+
+/* global styles  */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("/assets/pokeBG.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+  font-family: 'Patrick Hand SC', cursive;
+  color: white;
+}
+
+/* element styles */
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+/* layout */
+.container{
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.button-wrapper{
+  display: flex;
+  justify-content: space-around;
+}
+
+.stats-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  background-color: rgba(253, 1, 1, 0.494);
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+.game-state-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+  /* headings */
+.game-title {
+  text-align: center;
+}
+
+#restartButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75); 
+  z-index: 999; /* Ensure it appears on top of other content */
+}
+
+.restart-message button {
+  margin-top: 20px; 
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* button styling*/
+button {
+  font-size: 1.5rem;
+  line-height: 1em;
+  padding: 1.5rem;
+  margin: 0 auto;
+  background-color: rgba(253, 1, 1, 0.494);
+  color: white;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  transition: background-color 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-family: 'Orbitron', sans-serif;
+  font-family: 'Patrick Hand SC', cursive;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  border: 2px solid black;
+  transform: scale(1.2);
+}
+
+button:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* images */
+#tama-graphic {
+  max-height: 33vmin;
+}
+
+#tama-graphic:hover {
+  /* source: https://www.w3schools.com/howto/howto_css_shake_image.asp */
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
